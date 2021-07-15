@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!--Когда нужно показать определения и синонимы вместе-->
+    <button class="open-button" ondblclick="openFormDS()">Открыть форму ОпСин.</button>
+    <div class="form-popup-ds" id="myFormDS">
+      <form action="#" class="form-container">
+        <span class="close" onclick="closeFormDS()"></span>
+        <div class="difinition">
+          <span class="link1"><a href="https://ru.wikipedia.org/wiki/Заглавная_страница">>>подробнее</a></span>
+        </div>
+        <div class="synonyms">
+          <span class="link2"><a href="https://www.textsale.ru/index.php?sword=%E7%EE%EE%EF%E0%F0%EA">>>подробнее</a></span>
+        </div>
+      </form>
+    </div>
+    <!--Когда надо показать только Синонимы-->
+    <button class="open-button1" onmousewheel="openFormS()">Открыть форму С</button>
+    <div class="form-popup-s" id="myFormS">
+      <form action="#" class="form-container">
+        <span class="close" onclick="closeFormS()"></span>
+        <div class="synonyms">
+          <span class="link2"><a href="https://www.textsale.ru/index.php?sword=%E7%EE%EE%EF%E0%F0%EA">>>подробнее</a></span>
+        </div>
+      </form>
+    </div>
+    <!--Когда надо показать только Определения-->
+    <button class="open-button2" onclick="openFormD()">Открыть форму Опр</button>
+    <div class="form-popup-d" id="myFormD">
+      <form action="#" class="form-container">
+        <span class="close" onclick="closeFormD()"></span>
+        <div class="difinition">
+          <span class="link1"><a href="https://ru.wikipedia.org/wiki/Заглавная_страница">>>подробнее</a></span>
+        </div>
+      </form>
+    </div>
+    <script>
+      function openFormDS() {
+      document.getElementById("myFormDS").style.display = "block";
+      }
+      function closeFormDS() {
+      document.getElementById("myFormDS").style.display = "none";
+      }
+      function openFormS() {
+      document.getElementById("myFormS").style.display = "block";
+      }
+      function closeFormS() {
+      document.getElementById("myFormS").style.display = "none";
+      }
+      function openFormD() {
+      document.getElementById("myFormD").style.display = "block";
+      }
+      function closeFormD() {
+      document.getElementById("myFormD").style.display = "none";      
+      }
+    </script>
+  </body>
+</html>
