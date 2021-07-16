@@ -1,9 +1,11 @@
 const selectableTextArea = document.querySelectorAll("body");
 const popupWin = document.querySelector("#myFormDS");
-
+console.log(popupWin);//точки останова для джунов
 selectableTextArea.forEach(elem => {
   elem.addEventListener("mouseup", selectableTextAreaMouseUp);
+  console.log(elem);//точки останова для джунов
 });
+console.log(popupWin);//точки останова для джунов
 
 document.addEventListener("mousedown", documentMouseDown);
 
@@ -30,7 +32,7 @@ function selectableTextAreaMouseUp(event) {
 }
 
 function documentMouseDown(event) {
-  if(event.target.id!=="myFormDS" && getComputedStyle(popupWin).display==="block") { //Вместо #twitter-share-btn нужно написать id всплывающего окна
+  if(event.target.id!=="myFormDS" && getComputedStyle(popupWin).display==="block") {
     popupWin.style.display = "none";
     window.getSelection().empty();
   }
