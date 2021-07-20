@@ -14,7 +14,8 @@
 			"matches":[
 				"<all_urls>"
 			],
-			"js": ["script.js", "requestWiki.js"]
+			"js": ["script.js", "requestWiki.js"],
+			"css": ["popupText.css"]
 		}
 	],
 	"permissions": ["storage", "activeTab", "scripting"]
