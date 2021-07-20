@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="popupText.css">
   </head>
   <body>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <p>Добавим немного рандомного текста и хлеба. Люблю хлеб.</p>
-    <!--Когда нужно показать определения и синонимы вместе-->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae <a href="#">libero</a> pariatur eos aperiam saepe, beatae necessitatibus exercitationem, nemo, sit provident possimus debitis modi eligendi repellat iure vitae perferendis? Recusandae accusamus placeat velit itaque quis fuga laudantium debitis, ab eaque voluptatum illo esse incidunt! Quia tempore explicabo sint laboriosam rerum nihil voluptates voluptatibus voluptate iure. Earum magnam blanditiis voluptates quod ex exercitationem reiciendis, iure qui ducimus similique impedit nemo est, quisquam facere id adipisci harum tenetur consequuntur illum saepe laudantium. Suscipit facilis corporis natus aperiam! Reprehenderit hic quia natus nisi similique quod fugiat, architecto autem deleniti unde commodi accusamus modi voluptate?</p>
+    <p>Corporis iste ex minus vitae sit, quo illo beatae expedita distinctio modi eum eos officiis dicta soluta? This part is brilliant, let's share!! Illum, ducimus? Animi voluptate incidunt atque ipsa odit aperiam vero asperiores esse repellendus eveniet, molestiae minima optio dolor eum distinctio non perferendis sunt officiis corrupti similique et expedita saepe? Dolore, est. Tempore nisi beatae quasi quibusdam excepturi necessitatibus deleniti quas, consequuntur saepe sapiente quia, eligendi magni quod, dolores aspernatur ad sint! Nihil cupiditate atque enim esse hic laudantium, doloribus commodi fugit minus quasi nam laboriosam ipsum ex voluptatum recusandae ratione ullam, ducimus id quisquam placeat inventore aliquam in! Molestias quam maiores ipsa sequi.</p>
+    <p>Nam nisi inventore in officiis atque qui earum illo, quod laboriosam vitae quo blanditiis voluptatibus enim hic vero iure consectetur rerum deserunt deleniti? Laborum dolores cum mollitia veritatis, sequi id doloribus cupiditate asperiores minus delectus veniam porro hic optio vero ipsum cumque enim ratione animi? Saepe adipisci sapiente architecto, voluptatem reprehenderit sed esse, vel voluptas accusamus atque non neque inventore velit quidem nostrum ipsa quod repudiandae pariatur cum corporis quis molestias. Officiis labore id officia aperiam corrupti. Non veniam rem quod deserunt excepturi autem, assumenda recusandae beatae quos nihil praesentium repellendus voluptatum itaque reiciendis facere, incidunt adipisci, eligendi architecto pariatur!</p>
+    <p>Incidunt aspernatur unde enim, laboriosam velit voluptatem, dolores, et ut porro sapiente eius vel itaque quae nemo. Aut sequi maxime harum quod magni doloribus fugiat, impedit ullam et esse explicabo reprehenderit adipisci eos numquam commodi unde nihil expedita sed similique quaerat molestiae sapiente iure eveniet est. Recusandae, itaque sint harum minus vitae odio rerum deleniti eaque odit adipisci nihil quae veniam eos voluptas architecto non voluptate. Eum voluptatem necessitatibus doloremque ratione architecto voluptatum, totam dolorem ut non consequuntur et porro id qui labore voluptas tempora? Numquam dicta corrupti, laborum a cupiditate ab animi aut odit iure quia obcaecati ipsum temporibus.</p>
+    <p>Яблоко,сено,пуговица,театр,крест,война</p>
     <button class="open-button" ondblclick="openFormDS()">Открыть форму ОпСин.</button>
-    <div class="form-popup-ds" id="myFormDS">
-      <form action="#" class="form-container">
+    <div class="form-popup-ds" id="defSyn">
+      <div class="form-container">
         <span class="close" onclick="closeFormDS()"></span>
         <div class="difinition">
-          <span class="link1"><a href="https://ru.wikipedia.org/wiki/Заглавная_страница"»>подробнее</a></span>
+          <div class="definitioTitle">
+            <p>Значение слова:</p>
+          </div>
+          <div class = "text">
+            <p id="text5"></p>
+          </div>
+          <span class="link1"><a href="" target="_blank" id="hrefWiki" name="hrefWiki">подробнее</a></span>
         </div>
+        <div >
+          <hr>
+        </div>
+
         <div class="synonyms">
-          <span class="link2"><a href="https://www.textsale.ru/index.php?sword=?4??4??4??4??4??4??6?"»>подробнее</a></span>
+          <div class="definitionSyn">
+            <p>Синонимы:</p>
+          </div>
+          <span class="link2"><a href="https://www.textsale.ru/index.php?sword=?4??4??4??4??4??4??6?"target="_blank">подробнее</a></span>
         </div>
-      </form>
+      </div>
     </div>
       <!--Когда надо показать только Синонимы-->
     <button class="open-button1" onmousewheel="openFormS()">Открыть форму С</button>
-    <div class="form-popup-s" id="myFormS">
+    <div class="form-popup-s" id="syn">
       <form action="#" class="form-container">
         <span class="close" onclick="closeFormS()"></span>
         <div class="synonyms">
-          <span class="link2"><a href="https://www.textsale.ru/index.php?sword=?4??4??4??4??4??4??6?"»>подробнее</a></span>
+          <div></div>
+          <span class="link2"><a href="https://www.textsale.ru/index.php?sword=?4??4??4??4??4??4??6?" target="_blank">подробнее</a></span>
         </div>
       </form>
     </div>
     <!--Когда надо показать только Определения-->
     <button class="open-button2" onclick="openFormD()">Открыть форму Опр</button>
-    <div class="form-popup-d" id="myFormD">
+    <div class="form-popup-d" id="def">
       <form action="#" class="form-container">
         <span class="close" onclick="closeFormD()"></span>
+
         <div class="difinition">
-          <span class="link1"><a href="https://ru.wikipedia.org/wiki/Заглавная_страница"»>подробнее</a></span>
+
+          <span class="link1"><a href="https://ru.wikipedia.org/wiki/Заглавная_страница"target="_blank">подробнее</a></span>
         </div>
       </form>
     </div>
-    <script  src="./script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./requestWiki.js"></script>
   </body>
-</html>
