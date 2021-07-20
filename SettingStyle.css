@@ -1,0 +1,81 @@
+
+/*кнопка "закрыть"*/
+.close {
+position: absolute;
+right: 0px;
+top: 6px;
+width: 30px;
+height: 30px;
+opacity: 0.3;
+}
+.close:hover {
+opacity: 1;
+}
+.close:before, .close:after {
+position: absolute;
+left: 15px;
+content: ' ';
+height: 15px;
+width: 2px;
+background-color: red;
+}
+.close:before {
+transform: rotate(45deg);
+}
+.close:after {
+transform: rotate(-45deg);
+}
+/* Стилизация настроек*/
+.container-Setting{
+  display: flex;
+  position: absolute;
+  width: 197px;
+  height: 175px;
+  left: 50px; 
+  top: 6px;
+  background: #F5F5F5;
+  border: 1px solid #3453A3;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.Setting{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80%;
+  margin: auto;
+}
+.Separation{
+  margin: 6px 0px 6px 0px ;
+}
+.Definition, .Synonyms, .AutoWord, .AutoText, .DictionaryHints{
+  display: none;
+}
+/*Цвета чек-боксов*/
+label{
+  display: inline-block;
+  margin-bottom: 0;
+  color: #000;
+  cursor: default;
+  font-weight: normal;
+}
+label:before {
+ content: " ";
+ color: #fff;
+ display: inline-block;
+ font: 10px/10px FontAwesome;
+ margin-right: 15px;
+ position: relative;
+ text-align: center;
+ text-indent: 0px;
+ width: 11px;
+ height: 11px;
+ background: #FFF;
+ border: 1px solid #3453A3;
+ border-image: initial;
+ vertical-align: middle;
+}
+input:checked + label:before {
+ content: "\2714";
+ background: #3453A3;
+}
