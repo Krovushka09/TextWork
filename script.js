@@ -3,7 +3,7 @@ let div = document.createElement('div');
 div.className = "alert";
 div.id="popup";
 div.style.display="none";
-div.innerHTML = "<div class=\"form-popup-ds\" id=\"defSyn\"><div class=\"form-container\"><span class=\"close\" onclick=\"closeFormDS()\"></span><div class=\"difinition\"><div class=\"definitioTitle\"><p>Значение слова:</p></div><div class = \"text\"><p id=\"text5\"></p></div><span class=\"link1\"><a href=\"\" target=\"_blank\" id=\"hrefWiki\" name=\"hrefWiki\">подробнее</a></span></div><div><hr></div><div class=\"synonyms\"><div class=\"definitionSyn\"><p>Синонимы:</p></div><ol id=\"ol\"></ol><span class=\"link2\"><a href=\"\" target=\"_blank\">подробнее</a></span></div></div></div>";
+div.innerHTML = "<div class=\"form-popup-ds\" id=\"defSyn\"><div class=\"form-container\"><span class=\"close\" onclick=\"closeFormDS()\"></span><div class=\"difinition\"><div class=\"definitioTitle\"><p>Значение слова:</p></div><div class = \"text\"><p id=\"text5\"></p></div><span class=\"link1\"><a href=\"\" target=\"_blank\" id=\"hrefWiki\" name=\"hrefWiki\">подробнее</a></span></div><div><hr></div><div class=\"synonyms\"><div class=\"definitionSyn\"><p>Синонимы:</p></div><ol id=\"ol\"></ol><span class=\"link2\"><a href=\"\" id=\"hrefSyn\" target=\"_blank\">подробнее</a></span></div></div></div>";
 document.body.append(div);
 const selectableTextArea = document.querySelectorAll("body");
 const popupWin = document.querySelector("#popup");
@@ -17,8 +17,7 @@ function selectableTextAreaMouseUp(event) {
   setTimeout(async() => {
     const selectedText = window.getSelection().toString().trim();
     if(selectedText.length) {
-      const descriptionObj = await getObj(selectedText);
-      const synonymObj = await getObj(selectedText);
+      const defSynObj = await getDefinitionAndSynonyms(selectedText);
       const x = event.pageX;
       const y = event.pageY;
       const popupWinWidth = Number(popupWin.style.width.slice(0,-2));
@@ -29,12 +28,12 @@ function selectableTextAreaMouseUp(event) {
         popupWin.style.top = `${y - popupWinHeight*1.1}px`;
         popupWin.style.display = "block";
         popupWin.style.position="absolute";
-        document.getElementById('text5').innerHTML=descriptionObj.definition;
-        document.getElementById('hrefWiki').href = descriptionObj.url;
-        for(var i=0; i<synonymObj.syn.length; i++){
-          document.getElementById('ol').innerHTML+='<li>' +synonymObj.syn[i]  + '</li>'
+        document.getElementById('text5').innerHTML=defSynObj.definition;
+        document.getElementById('hrefWiki').href = defSynObj.urlDefinition;
+        for(var i=0; i<defSynObj.synonyms.length; i++){
+          document.getElementById('ol').innerHTML+='<li>' +defSynObj.synonyms[i]  + '</li>';
         };
-
+        document.getElementById('hrefSyn').href = defSynObj.urlSynonyms;
       }
       else {
         popupWin.style.left = `${x-popupWinWidth*0.5}px`;
@@ -45,7 +44,7 @@ function selectableTextAreaMouseUp(event) {
 }
 
 function documentMouseDown(event) {
-  if(event.target.id!=="hrefWiki" && popupWin.style.display==="block") {
+  if(event.target.id!=="hrefWiki" && event.target.id!=="hrefSyn" && popupWin.style.display==="block") {
     popupWin.style.display = "none";
     window.getSelection().empty();
   }
