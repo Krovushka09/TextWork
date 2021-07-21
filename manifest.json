@@ -6,8 +6,8 @@
 	"author": "Автор",
 	"action": {
 		"default_title": "Работа с текстом",
-		"default_icon": "icon.png",
-		"default_popup": "main.html"
+		"default_icon": "/image/logo.png",
+		"default_popup": "SettingWin.html"
 	},
 	"content_scripts": [
 		{
@@ -18,5 +18,6 @@
 			"css": ["popupText.css"]
 		}
 	],
-	"permissions": ["storage", "activeTab", "scripting"]
+	"permissions": ["storage", "activeTab", "scripting"],
+	"options_page": "SettingWin.html"
 }
