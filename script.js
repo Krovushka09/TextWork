@@ -30,7 +30,6 @@ function selectableTextAreaMouseUp(event) {
         popupWin.style.position="absolute";
         document.getElementById('text5').innerHTML=descriptionObj.definition;
         document.getElementById('hrefWiki').href = descriptionObj.url;
-
       }
       else {
         popupWin.style.left = `${x-popupWinWidth*0.5}px`;
