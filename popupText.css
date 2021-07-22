@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
 
-/* Кнопка, используемая для открытия контактной формы-фиксируется в нижней части страницы */
-.open-button {
+*.open-button {
 background-color: #555;
 color: white;
 padding: 16px 20px;
@@ -36,18 +33,17 @@ opacity: 0.8;
 position: fixed;
 bottom: 23px;
 left: 414px;
-}
+}*/
 /* Всплывающая форма-скрыта по умолчанию */
 .form-popup-ds {
 position: absolute;
 width: 409px;
-height: 176px;
+height: 190px;
 left: 17px;
 top: 20px;
 background: #F5F5F5;
 border-radius: 10px;
-display: none;
- box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 /*Создание крестика*/
 .close {
@@ -78,54 +74,46 @@ transform: rotate(-45deg);
 /*Блок с определением*/
 .difinition{
 width: 409px;
-height: 105px;
+height: 95px;
 
-font-family: 'Open Sans', sans-serif;
+/*font-family: 'Open Sans', sans-serif;
 font-style: normal;
-font-size: 15px;
+font-size: 15px;*/
 }
 /*Блок с синонимами*/
 .synonyms{
 width: 409px;
-height: 71px;
+height: 95px;
 }
 /*Стили для Ссылки*/
-.link1 {
+
+.form-popup-ds a:link{
 position: absolute;
-width: 77px;
-height: 11px;
+  width: 77px;
+  height: 11px;
+  font-family: Cabin;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: 'ss01' on, 'salt' on;
+  color: #004469;
+}
+ .link1 a {
 left: 325px;
 right: 7px;
-top: 94px;
-font-family: Cabin;
-font-style: italic;
-font-weight: normal;
-font-size: 13px;
-line-height: 15px;
-display: flex;
-align-items: center;
-text-align: center;
-font-feature-settings: 'ss01' on, 'salt' on;
-color: #004469;
+top: 80px;
+  color: #004469;
 }
-.link2{
-position: absolute;
-width: 77px;
-height: 11px;
+.link2 a{
 left: 325px;
 right: 7px;
-bottom: 5px;
-font-family: Cabin;
-font-style: italic;
-font-weight: normal;
-font-size: 13px;
-line-height: 15px;
-display: flex;
-align-items: center;
-text-align: center;
-font-feature-settings: 'ss01' on, 'salt' on;
+bottom: 10px;
 }
-.form-popup-s .link2{
+/*.form-popup-s .link2{
 position: absolute;
 width: 70px;
 height: 11px;
@@ -140,37 +128,32 @@ display: flex;
 align-items: center;
 text-align: center;
 font-feature-settings: 'ss01' on, 'salt' on;
-
-}
+}*/
 /*Всплывающая форма для синонимов*/
 .form-popup-s{
-position: absolute;
-background: #F5F5F5;
-border-radius: 10px;
-display: none;
 width: 153px;
 height: 91.94px;
 }
 /*Всплывающее окно для определений*/
 .form-popup-d {
-position: absolute;
-background: #F5F5F5;
-border-radius: 10px;
-display: none;
 width: 293;
 height: 53;
 }
 
 hr{
 border: 1px solid rgba(196, 196, 196, 0.4);
+
 }
 
-.text{
+.form-popup-ds p{
   position: absolute;
-  width: 390px;
-  height: 75px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+}
+
+.definitionText p{
   left: 10px;
-  top: 10px;
+  top: 20px;
   overflow: hidden; /*показывает первыетри строчки*/
       text-overflow: ellipsis;
       display: -moz-box;
@@ -182,19 +165,32 @@ border: 1px solid rgba(196, 196, 196, 0.4);
       box-orient: vertical;
 }
 
- .definitioTitle {
-   position: absolute;
+.form-popup-ds ul {
+  position: absolute;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+}
+
+.synonymText ul {
+rght:10px;
+}
+.list {
+  margin-bottom: 20px;
+}
+
+ .definitionTitle p{
    width: 200px;
    height: 20px;
    left: 10px;
-   top: -10px;
+   top: 0px;
    font-weight: bold;
  }
-
-  .definitionSyn{
+  .synonymTitle p{
     position: absolute;
     width: 200px;
     height: 20px;
     left: 10px;
+    top:100px;
     font-weight: bold;
+    margin-bottom: 10px;
   }
