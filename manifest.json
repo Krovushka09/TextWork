@@ -14,7 +14,7 @@
 			"matches":[
 				"<all_urls>"
 			],
-			"js": ["script.js", "requestWiki.js"],
+			"js": ["defSyn.js", "requestWordData.js"],
 			"css": ["popupText.css"]
 		}
 	],
