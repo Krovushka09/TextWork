@@ -32,7 +32,7 @@ function selectableTextAreaMouseUp(event) {
         document.getElementById('hrefWiki').href = defSynObj.urlDefinition;
         for(var i=0; i<defSynObj.synonyms.length; i++){
           document.getElementById('ol').innerHTML+='<li>' +defSynObj.synonyms[i]  + '</li>';
-        };
+        }
         document.getElementById('hrefSyn').href = defSynObj.urlSynonyms;
       }
       else {
@@ -46,6 +46,7 @@ function selectableTextAreaMouseUp(event) {
 function documentMouseDown(event) {
   if(event.target.id!=="hrefWiki" && event.target.id!=="hrefSyn" && popupWin.style.display==="block") {
     popupWin.style.display = "none";
+    document.getElementById('ol').innerHTML = "";
     window.getSelection().empty();
   }
 }
