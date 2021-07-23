@@ -1,5 +1,5 @@
 async function getDefinitionAndSynonyms(word) {
-    const searchQuery = wordTest.trim();
+    const searchQuery = word.trim();
     const result = {};
 
     // делаем запрос на яндекс
