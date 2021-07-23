@@ -1,5 +1,4 @@
 async function getDefinitionAndSynonyms(word) {
-  const wordTest = 'облако';
     const searchQuery = wordTest.trim();
     const result = {};
 
@@ -21,7 +20,7 @@ async function getInitialFormAndSynonyms(word) {
     const answer = await searchQuery(`https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20210719T110344Z.d10dc7be15af410e.076c0dcf9789baf9ea84c3ef96a4ac08855547a5&lang=ru-ru&flags=4&text=${word}`);
   console.log(answer);
   console.log('if: ' + answer.def[0]);
-    res.initialForm = answer.def[0].text
+    res.initialForm = answer.def[0].text;
     res.url = "https://translate.yandex.ru/?lang=ru-en&text=" + res.initialForm;
     let table = answer.def[0].tr;
     for (let i = 0; i < 3; i++) {
