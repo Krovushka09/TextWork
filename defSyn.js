@@ -30,9 +30,11 @@ function selectableTextAreaMouseUp(event) {
         popupWin.style.position="absolute";
         document.getElementById('text5').innerHTML=defSynObj.definition;
         document.getElementById('hrefWiki').href = defSynObj.urlDefinition;
+        let synStr = '';
         for(var i=0; i<defSynObj.synonyms.length; i++){
-          document.getElementById('ol').innerHTML+='<li>' +defSynObj.synonyms[i]  + '</li>';
-        }
+          synStr +='<li>' +defSynObj.synonyms[i]  + '</li>';
+        };
+        document.getElementById('ol').innerHTML = synStr;
         document.getElementById('hrefSyn').href = defSynObj.urlSynonyms;
       }
       else {
