@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div class="container-dictionary" id="Text-Work-main" >
+    <div class="header">
+      <div class="logo">
+        <img src="assets/300h.png" alt="300h.png"/>
+        <p>TextWork</p>   
+      </div>
+      <div class="SettingHelp">
+        <div class="Help">
+      
+        </div>
+      </div>
+    </div>
+    <hr class="strip">
+    <div class="main">
+      <div class="vocabularyAndAdd">
+        <div class="vocabulary" id="text-work-vocabulary-container"><!--Место для хранения словаря-->        
+            
+        </div>
+        <div class="AddWord"><!--Всплывающее окно для введения нового слова и кнопка--> 
+          <div class="FormForAdd" id="OpenAdd"><!--div Для редактирования текущего слова--> 
+            <span class="Text-Work-decryption" id="DecryptionSpan">Купи-пива! и Сухари</span>
+            <input type="text" id="DecryptionInput" style="display:none;" placeholder="Заполни меня"/>
+            <img src="#" alt="+" id="AddWordInVocabulary"/>
+            <img src="#" alt="X" id="CloseFormForAdd"/>
+          </div>
+          <button class="Text-Work-button-add" id="add-button">Добавить</button><!--Кнопка--> 
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
