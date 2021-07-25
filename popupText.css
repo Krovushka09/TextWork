@@ -1,6 +1,5 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-
 *.open-button {
 background-color: #555;
 color: white;
@@ -35,7 +34,7 @@ bottom: 23px;
 left: 414px;
 }*/
 /* Всплывающая форма-скрыта по умолчанию */
-.form-popup-ds {
+.textwork-form-popup-ds {
 position: absolute;
 width: 409px;
 height: 190px;
@@ -72,7 +71,7 @@ transform: rotate(45deg);
 transform: rotate(-45deg);
 }
 /*Блок с определением*/
-.difinition{
+.textwork-difinition{
 width: 409px;
 height: 95px;
 
@@ -81,13 +80,13 @@ font-style: normal;
 font-size: 15px;*/
 }
 /*Блок с синонимами*/
-.synonyms{
+.textwork-synonyms{
 width: 409px;
 height: 95px;
 }
 /*Стили для Ссылки*/
 
-.form-popup-ds a:link{
+.textwork-form-popup-ds a:link{
 position: absolute;
   width: 77px;
   height: 11px;
@@ -101,14 +100,15 @@ position: absolute;
   text-align: center;
   font-feature-settings: 'ss01' on, 'salt' on;
   color: #004469;
+  text-decoration: underline;
 }
- .link1 a {
+ .textwork-link1 a {
 left: 325px;
 right: 7px;
 top: 80px;
   color: #004469;
 }
-.link2 a{
+.textwork-link2 a{
 left: 325px;
 right: 7px;
 bottom: 10px;
@@ -130,30 +130,34 @@ text-align: center;
 font-feature-settings: 'ss01' on, 'salt' on;
 }*/
 /*Всплывающая форма для синонимов*/
-.form-popup-s{
+.textwork-form-popup-s{
 width: 153px;
 height: 91.94px;
 }
 /*Всплывающее окно для определений*/
-.form-popup-d {
+.textwork-form-popup-d {
 width: 293;
 height: 53;
 }
 
-hr{
+.textwork-form-popup-ds hr{
 border: 1px solid rgba(196, 196, 196, 0.4);
-
+margin-bottom: 20px;
 }
 
-.form-popup-ds p{
+.textwork-form-popup-ds p{
   position: absolute;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  color: black;
+  margin: 0px;
+  padding: 0px;
 }
 
-.definitionText p{
+.textwork-definitionText p{
   left: 10px;
-  top: 20px;
+  top: 25px;
+  line-height: 18px;
   overflow: hidden; /*показывает первыетри строчки*/
       text-overflow: ellipsis;
       display: -moz-box;
@@ -165,32 +169,37 @@ border: 1px solid rgba(196, 196, 196, 0.4);
       box-orient: vertical;
 }
 
-.form-popup-ds ul {
+.textwork-form-popup-ds ul {
   position: absolute;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  list-style-type: none;
+  line-height: 18px;
+  margin: 0px;
+  padding: 0px;
 }
 
-.synonymText ul {
-rght:10px;
-}
-.list {
-  margin-bottom: 20px;
+.textwork-form-popup-ds li {
+  padding-left: 10px;
 }
 
- .definitionTitle p{
+.textwork-synonyms-list {
+
+}
+
+ .textwork-definitionTitle p{
    width: 200px;
    height: 20px;
    left: 10px;
-   top: 0px;
+   top: 5px;
    font-weight: bold;
  }
-  .synonymTitle p{
+  .textwork-synonymTitle p{
     position: absolute;
     width: 200px;
     height: 20px;
     left: 10px;
     top:100px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-top: 5px;
   }
