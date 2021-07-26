@@ -181,6 +181,7 @@ margin-bottom: 20px;
 
 .textwork-form-popup-ds li {
   padding-left: 10px;
+    display: block;
 }
 
 .textwork-synonyms-list {
