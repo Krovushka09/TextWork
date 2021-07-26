@@ -51,7 +51,7 @@
   <li>Галочками отметить нужные вам функции расширения</li>
   <li>Закрыть окно настроек, нажав на крестик в правом верхнем углу. Изменения сохраняются автоматически при закрытии окна.</li>
  </ol><br>
- ![Окно настроек](https://github.com/Krovushka09/TextWork/blob/SofiVoit-patch-6/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8.PNG)<br>
+ <img src="https://github.com/Krovushka09/TextWork/blob/develop/Settings.PNG"><br>
  
  ## Как пользоваться расширением
  
@@ -62,7 +62,7 @@
   <li>Выделить незнакомое вам слово.</li>
   <li>После выделения над словом всплывает окно с определением и/или синонимами выделенного слова.</li>
 </ol><br>
-![Всплывашка](https://github.com/Krovushka09/TextWork/blob/SofiVoit-patch-6/Settings.PNG)<br>
+<img src="https://github.com/Krovushka09/TextWork/blob/develop/Pop%20up.PNG"><br>
 
 ### Работа со словарем пользователя
 
