@@ -1,0 +1,75 @@
+.container-dictionary,.header, hr{
+  width: 320px;
+}
+.container-dictionary{
+  margin: 10px 0px 0px 10px;
+  height: 328px;
+  background: #F5F5F5;
+}
+/* Блок тилей для головной части */
+.header,.logo{
+  display: flex;
+  align-items: flex-end;
+  height: 48px;
+  background-color: #2D54BA;
+  font-family: Sedan;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+}
+p{
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.81);
+}
+hr{
+  height: 4px;
+  background-color: #204885;
+  border-radius: 1px;
+  margin: initial ;
+}
+img{
+  position: static;
+  margin: 5px 0px 0px 0px;
+  height: 44px;
+  width: 52px;
+}
+/* Блок тилей для тела*/
+.main,.vocabulary, .AddWord{
+  display: flex;
+  width: 320px;
+  height: 275px;
+}
+.vocabulary{
+  height: 220px;
+  overflow: auto;
+}
+.AddWord{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 282px;
+  height: 55px;
+  width: 320px;
+  border-radius: 1px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  
+}
+.FormForAdd{
+  display: none;
+  background-color:#BAD6FF;
+  top: 282px;
+  height: 55px;
+  width: 320px;
+}
+.Text-Work-button-add{
+  width: 184px;
+  height: 34px;
+  margin-left: 68px;
+  background: #3453A3;
+  border-radius: 2px;
+  border: 0px;
+  color: #FFFFFF;
+  display: inline;
+}
