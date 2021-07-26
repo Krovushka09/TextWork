@@ -3,7 +3,7 @@ let div = document.createElement('div');
 div.className = "alert";
 div.id="popup";
 div.style.display="none";
-div.innerHTML = "<div class=\"textwork-form-popup-ds\" id=\"defSyn\"><div class=\"textwork-form-container\"><span class=\"close\" onclick=\"closeFormDS()\"></span><div class=\"textwork-difinition\"><div class=\"textwork-definitionTitle\"><p>Значение слова:</p></div><div class = \"textwork-definitionText\"><p id=\"text5\"></p></div><span class=\"textwork-link1\"><a href=\"\" target=\"_blank\" id=\"hrefWiki\" name=\"hrefWiki\">подробнее</a></span></div><div><hr></div><div class=\"textwork-synonyms\"><div class=\"textwork-synonymTitle\"><p>Синонимы:</p></div><div class = \"textwork-synonyms-list\"><ul class =\"synonymText\" id=\"ol\"></ul></div><span class=\"textwork-link2\"><a href=\"\" id=\"hrefSyn\" target=\"_blank\">подробнее</a></span></div></div></div>";
+div.innerHTML = "<div class=\"textwork-form-popup-ds\" id=\"defSyn\"><div class=\"textwork-form-container\"><span class=\"close\" onclick=\"closeFormDS()\"></span><div class=\"textwork-difinition\"><div class=\"textwork-definitionTitle\"><p>Значение слова:</p></div><div class = \"textwork-definitionText\"><p id=\"text5\"></p></div><span class=\"textwork-link1\"><a href=\"\" target=\"_blank\" id=\"hrefWiki\" name=\"hrefWiki\">подробнее</a></span></div><div><hr></div><div class=\"textwork-synonyms\"><div class=\"textwork-synonymTitle\"><p>Синонимы:</p></div><div class = \"textwork-synonyms-list\"><ul class =\"synonymText\" id=\"listSynonyms\"></ul></div><span class=\"textwork-link2\"><a href=\"\" id=\"hrefSyn\" target=\"_blank\">подробнее</a></span></div></div></div>";
 document.body.append(div);
 const selectableTextArea = document.querySelectorAll("body");
 const popupWin = document.querySelector("#popup");
@@ -31,7 +31,7 @@ function selectableTextAreaMouseUp(event) {
         document.getElementById('text5').innerHTML=defSynObj.definition;
         document.getElementById('hrefWiki').href = defSynObj.urlDefinition;
         for(var i=0; i<defSynObj.synonyms.length; i++){
-          document.getElementById('ol').innerHTML+='<li>' +defSynObj.synonyms[i]  + '</li>';
+          document.getElementById('listSynonyms').innerHTML+='<li>' +defSynObj.synonyms[i]  + '</li>';
         }
         document.getElementById('hrefSyn').href = defSynObj.urlSynonyms;
       }
@@ -46,7 +46,7 @@ function selectableTextAreaMouseUp(event) {
 function documentMouseDown(event) {
   if(event.target.id!=="hrefWiki" && event.target.id!=="hrefSyn" && popupWin.style.display==="block") {
     popupWin.style.display = "none";
-    document.getElementById('ol').innerHTML = "";
+    document.getElementById('listSynonyms').innerHTML = "";
     window.getSelection().empty();
   }
 }
