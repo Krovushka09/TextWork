@@ -7,15 +7,15 @@
 	"action": {
 		"default_title": "Работа с текстом",
 		"default_icon": "/image/logo.png",
-		"default_popup": "SettingWin.html"
+		"default_popup": "VocabularyHTML.html"
 	},
 	"content_scripts": [
 		{
 			"matches":[
 				"<all_urls>"
 			],
-			"js": ["defSyn.js", "requestWordData.js"],
-			"css": ["popupText.css"]
+			"js": ["defSyn.js", "requestWordData.js","VocabularyJS.js"],
+			"css": ["popupText.css","VocabularyStyles.css"]
 		}
 	],
 	"permissions": ["storage", "activeTab", "scripting"],
