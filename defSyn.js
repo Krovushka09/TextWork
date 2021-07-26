@@ -3,7 +3,7 @@ let div = document.createElement('div');
 div.className = "alert";
 div.id="popup";
 div.style.display="none";
-div.innerHTML = "<div class=\"form-popup-ds\" id=\"defSyn\"><div class=\"form-container\"><span class=\"close\" onclick=\"closeFormDS()\"></span><div class=\"difinition\"><div class=\"definitionTitle\"><p>Значение слова:</p></div><div class = \"definitionText\"><p id=\"text5\"></p></div><span class=\"link1\"><a href=\"\" target=\"_blank\" id=\"hrefWiki\" name=\"hrefWiki\">подробнее</a></span></div><div><hr></div><div class=\"synonyms\"><div class=\"synonymTitle\"><p>Синонимы:</p></div><div class = \"list\"><ul class =\"synonymText\" id=\"ol\"></ul></div><span class=\"link2\"><a href=\"\" id=\"hrefSyn\" target=\"_blank\">подробнее</a></span></div></div></div>";
+div.innerHTML = "<div class=\"textwork-form-popup-ds\" id=\"defSyn\"><div class=\"textwork-form-container\"><span class=\"close\" onclick=\"closeFormDS()\"></span><div class=\"textwork-difinition\"><div class=\"textwork-definitionTitle\"><p>Значение слова:</p></div><div class = \"textwork-definitionText\"><p id=\"text5\"></p></div><span class=\"textwork-link1\"><a href=\"\" target=\"_blank\" id=\"hrefWiki\" name=\"hrefWiki\">подробнее</a></span></div><div><hr></div><div class=\"textwork-synonyms\"><div class=\"textwork-synonymTitle\"><p>Синонимы:</p></div><div class = \"textwork-synonyms-list\"><ul class =\"synonymText\" id=\"ol\"></ul></div><span class=\"textwork-link2\"><a href=\"\" id=\"hrefSyn\" target=\"_blank\">подробнее</a></span></div></div></div>";
 document.body.append(div);
 const selectableTextArea = document.querySelectorAll("body");
 const popupWin = document.querySelector("#popup");
