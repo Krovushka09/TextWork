@@ -1,3 +1,5 @@
+
+/*стили для словаря*/
 .container-dictionary,.header, hr{
   width: 320px;
 }
@@ -5,11 +7,13 @@
   margin: 10px 0px 0px 10px;
   height: 328px;
   background: #F5F5F5;
+  display: inherit; 
 }
 /* Блок тилей для головной части */
 .header,.logo{
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   height: 48px;
   background-color: #2D54BA;
   font-family: Sedan;
@@ -33,6 +37,14 @@ img{
   height: 44px;
   width: 52px;
 }
+.SettingHelp{
+  padding-bottom: 5px;
+  padding-right: 12px;
+}
+.icon-in-header{
+  width: 30px;
+  height: 30px;
+}
 /* Блок тилей для тела*/
 .main,.vocabulary, .AddWord{
   display: flex;
@@ -44,7 +56,6 @@ img{
   overflow: auto;
 }
 .AddWord{
-  position: absolute;
   display: flex;
   align-items: center;
   top: 282px;
@@ -54,7 +65,6 @@ img{
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  
 }
 .FormForAdd{
   display: none;
@@ -72,4 +82,21 @@ img{
   border: 0px;
   color: #FFFFFF;
   display: inline;
+}
+.textword-icon-daw{
+  width: 18px;
+  height: 14px;
+}
+.textword-icon-cross{
+  width: 16px;
+  height: 16px;
+}
+.word-input-area{
+  width: 233px;
+}
+.button-area{
+  width: 87px;
+}
+.Input-in-add-form, .Span-in-add-form{
+  width:133px;
 }
