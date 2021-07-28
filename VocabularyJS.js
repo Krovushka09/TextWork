@@ -1,5 +1,5 @@
-var span = document.getElementById('Text-word-DecryptionSpan');
-var input = document.getElementById('Text-word-DecryptionInput');
+var span = document.getElementById('Text-Word-DecryptionSpan');
+var input = document.getElementById('Text-Word-DecryptionInput');
 var textmain = document.getElementById('Text-Work-main');//ссылка на весь контейнер
 var textcontainerwork = document.getElementById('text-work-vocabulary-container');
 var buttonAdd = document.getElementById('add-button');//сслыка для кнокпи "добавить"
@@ -8,20 +8,25 @@ var checkAdding = document.getElementById('AddWordInVocabulary');//ссылка 
 var newSpanInForm = document.getElementsByClassName('Text-Work-decryption');
 var activeInput;
 var iterator=0;
-var closeTextWork=function(event){//закрыть окно словаря
+var closeTextWork=function(event){//закрыть окно словарz
   newSpanInForm= event.target.id;
   console.log(newSpanInForm);
 }
 var spanToInput = function(event) {
-    if (event.target.id.startsWith('DecryptionSpan')){
-      let span = document.getElementById(event.target.id);
-      let id = event.target.id.split('-')[1];
-      let input = document.getElementById(`DecryptionInput-${id}`);
-      activeInput=input;
-      span.style.display='none';
-      input.style.display='inline';
+  let currentId;
+  if (event.target.id.startsWith('DecryptionSpan')){
+    let span = document.getElementById(event.target.id);
+    let newId = event.target.id.split('-')[1];
+    if(newId !== currentId){
       inputToSpan(null, true);
     }
+    let input = document.getElementById(`DecryptionInput-${newId}`);
+    activeInput=input;
+    currentId=newId;
+    span.style.display='none';
+    input.style.display='inline';
+    saveValue(newId, activeInput.value);
+  }
 }
 var inputToSpan = function(event, force) {
   if((activeInput &&(force||(!force && !event.target.id.startsWith('DecryptionSpan') && !event.target.id.startsWith('DecryptionInput'))))){
@@ -29,6 +34,7 @@ var inputToSpan = function(event, force) {
     let id= activeInput.id.split('-')[1];
     let span = document.getElementById(`DecryptionSpan-${id}`);
     span.style.display='inline';
+    saveValue(id, activeInput.value);
   }
 }
 var addpair = function(value) {//добавить пару "спан-инпут"
@@ -57,5 +63,10 @@ checkAdding.addEventListener('click', addpair);
 const  dictionary=[{Short:"нзч", long: 'не за что'}, {Short:'чд', long: 'что делаешь?'}, {Short:'ттт', long: 'тьфу-тьфу-тьфу'}];
  dictionary.forEach((Object)=>{
   addpair(Object.Short);
-  addpair(Object.long);  
+  addpair(Object.long);
  });
+var saveValue = function(id, value){
+    let input = document.getElementById(`DecryptionInput-${id}`);
+    input.value=`${value}`;
+    document.getElementById(`DecryptionSpan-${id}`).textContent=`${value}`;
+  }
