@@ -4,18 +4,24 @@
   <meta charset="UTF-8">
 </head>
 <body>
-  <div class="container-Setting" id="mySetting">
-    <span class="close" onclick="closeFormDS()"></span>
-    <form action="#" class="Setting">
-      <input type="checkbox" class="Definition" id="Definition" name="Setting"> <label for="Definition">Определение</label>
+  <div class="container-Setting" id="Text-Word-Setting">
+    <div class="logo-In-Setting-TW">
+      <img src="assets/setting.png" alt="setting.png"/>
+      <p>TextWork</p>
+      <a target="_blank" href="https://docs.google.com/document/d/1oi1GjhETtUPFdyZ8qcRDOw0tQLy8Izl5ByDCJav26wg/edit?usp=sharing"><img class="help-text-word" src="assets/pomoshh.png" alt="pomoshh.png" id="icon-help-in-logo"/></a>
+      <span class="close" id="closeSettingForm"></span>
+    </div>
+    <div action="#" class="Setting">
+      <input type="checkbox" class="Definition" id="Definition" name="Setting"/> <label for="Definition">Определение</label>
       <hr class="Separation">
-      <input type="checkbox" class="Synonyms" id="Synonyms" name="Setting"> <label for="Synonyms">Синонимы</label>
+      <input type="checkbox" class="Synonyms" id="Synonyms" name="Setting"/> <label for="Synonyms">Синонимы</label>
       <hr class="Separation">
-      <input type="checkbox" class="AutoWord" id="AutoWord" name="Setting"> <label for="AutoWord">Автодополнение слова</label>
+      <input type="checkbox" class="AutoWord" id="AutoWord" name="Setting" disabled /> <label for="AutoWord" title="в разработке">Автодополнение слова</label>
       <hr class="Separation">
-      <input type="checkbox" class="AutoText" id="AutoText" name="Setting"> <label for="AutoText">Автодополнение текста</label>
+      <input type="checkbox" class="AutoText" id="AutoText" name="Setting" disabled/> <label for="AutoText" title="в разработке">Автодополнение текста</label>
       <hr class="Separation">
-      <input type="checkbox" class="DictionaryHints" id="DictionaryHints" name="Setting"> <label for="DictionaryHints"> Подсказки словаря </label>
-      </form>
+      <input type="checkbox" class="DictionaryHints" id="DictionaryHints" name="Setting" disabled /> <label for="DictionaryHints" title="в разработке">Подсказки словаря</label>
+    </div>
+  </div>
 </body>
 </html>
