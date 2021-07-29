@@ -1,4 +1,3 @@
-
 /*кнопка "закрыть"*/
 .close {
 position: absolute;
@@ -27,10 +26,11 @@ transform: rotate(-45deg);
 }
 /* Стилизация настроек*/
 .container-Setting{
+  flex-direction: column;
   display: flex;
   position: absolute;
   width: 197px;
-  height: 175px;
+  height: 200px;
   left: 50px; 
   top: 6px;
   background: #F5F5F5;
@@ -39,17 +39,40 @@ transform: rotate(-45deg);
   border-radius: 5px;
 }
 .Setting{
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 80%;
   margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+p{
+  color: rgba(255, 255, 255, 0.81);
+  margin-top: 0;
+  margin-bottom: 7px;
+  padding-right: 15px;
+}
+.logo-In-Setting-TW{
+  display: flex;
+  background-color: #2D54BA;
+  align-items: center;
+  justify-content: center;
 }
 .Separation{
   margin: 6px 0px 6px 0px ;
 }
 .Definition, .Synonyms, .AutoWord, .AutoText, .DictionaryHints{
   display: none;
+}
+.help-text-word{
+  height: 25px;
+  widows: 25px;
+  padding-left: 6px;
+}
+img{
+  height: 26px;
+  width: 30px;
 }
 /*Цвета чек-боксов*/
 label{
