@@ -7,6 +7,9 @@ width: 30px;
 height: 30px;
 opacity: 0.3;
 }
+body {
+  margin: 0px!important;
+}
 .close:hover {
 opacity: 1;
 }
@@ -28,55 +31,54 @@ transform: rotate(-45deg);
 .container-Setting{
   flex-direction: column;
   display: flex;
-  position: absolute;
   width: 197px;
   height: 200px;
-  left: 50px; 
-  top: 6px;
   background: #F5F5F5;
-  border: 1px solid #3453A3;
-  box-sizing: border-box;
-  border-radius: 5px;
+}
+
+.Definition, .Synonyms, .AutoWord, .AutoText, .DictionaryHints{
+  display: none;
 }
 .Setting{
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 80%;
+  font-size: 12px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 p{
   color: rgba(255, 255, 255, 0.81);
-  margin-top: 0;
-  margin-bottom: 7px;
-  padding-right: 15px;
 }
 .logo-In-Setting-TW{
+  height: 35px;
   display: flex;
   background-color: #2D54BA;
-  align-items: center;
-  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.TextWork__extentionName {
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      color: rgba(255, 255, 255, 0.81);
+      margin-top: 6px;
+}
+.help-text-word {
+      margin-left: 42px;
 }
 .Separation{
   margin: 6px 0px 6px 0px ;
 }
-.Definition, .Synonyms, .AutoWord, .AutoText, .DictionaryHints{
-  display: none;
-}
-.help-text-word{
-  height: 25px;
-  widows: 25px;
-  padding-left: 6px;
-}
+
 img{
   height: 26px;
   width: 30px;
+  margin-top: 6px;
 }
 /*Цвета чек-боксов*/
 label{
-  display: inline-block;
+  /*display: inline-block0;*/
   margin-bottom: 0;
   color: #000;
   cursor: default;
@@ -100,5 +102,5 @@ label:before {
 }
 input:checked + label:before {
  content: "\2714";
- background: #3453A3;
+  background: #3453A3;
 }
