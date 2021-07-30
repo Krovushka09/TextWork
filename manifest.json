@@ -6,7 +6,7 @@
 	"author": "Автор",
 	"action": {
 		"default_title": "Работа с текстом",
-		"default_icon": "/image/logo.png",
+		"default_icon": "/logo.png",
 		"default_popup": "SettingWin.html"
 	},
 	"content_scripts": [
